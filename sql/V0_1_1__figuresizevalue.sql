@@ -39,7 +39,7 @@ ALTER TABLE figuresizevalue
 -- Constraints der Tabelle `figuresizevalue`
 --
 ALTER TABLE figuresizevalue
-  ADD CONSTRAINT figuresizevalue_1` FOREIGN KEY (figuresize_id) REFERENCES figuresize (id);
+  ADD CONSTRAINT figuresizevalue_1 FOREIGN KEY (figuresize_id) REFERENCES figuresize (id);
 
 INSERT INTO figuresizevalue(figuresize_id, death_low, death_high, insury_low, insury_high, life_low, life_high, initiative, price) 
 VALUES ((SELECT id FROM figuresize WHERE text = 'Klein'), 6, 12, 2, 4, 2, 4, 1, 3);
