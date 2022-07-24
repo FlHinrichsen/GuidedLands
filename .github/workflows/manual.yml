@@ -25,10 +25,10 @@ jobs:
       uses: joshuaavalon/flyway-action@v2.1.0
       with:
         # The jdbc url to use to connect to the database
-        url: $***REMOVED******REMOVED*** secrets.DB ***REMOVED******REMOVED***
+        url: $***REMOVED******REMOVED*** env.DB ***REMOVED******REMOVED***
         # The user to use to connect to the database
-        user: $***REMOVED******REMOVED*** secrets.DBUSER ***REMOVED******REMOVED***
+        user: $***REMOVED******REMOVED*** env.DBUSER ***REMOVED******REMOVED***
         # The password to use to connect to the database
-        password: $***REMOVED******REMOVED*** secrets.DBPW ***REMOVED******REMOVED***
+        password: $***REMOVED******REMOVED*** env.DBPW ***REMOVED******REMOVED***
         # Comma-separated list of locations to scan recursively for migrations
         locations: ./sql
