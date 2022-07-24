@@ -21,13 +21,13 @@ CREATE TABLE injuryvalue (
   price int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO deathvalue(injury, price) VALUES (2, 4);
-INSERT INTO deathvalue(injury, price) VALUES (3, 5);
-INSERT INTO deathvalue(injury, price) VALUES (4, 7);
-INSERT INTO deathvalue(injury, price) VALUES (5, 10);
-INSERT INTO deathvalue(injury, price) VALUES (6, 13);
-INSERT INTO deathvalue(injury, price) VALUES (7, 17);
-INSERT INTO deathvalue(injury, price) VALUES (8, 21);
+INSERT INTO injuryvalue(injury, price) VALUES (2, 4);
+INSERT INTO injuryvalue(injury, price) VALUES (3, 5);
+INSERT INTO injuryvalue(injury, price) VALUES (4, 7);
+INSERT INTO injuryvalue(injury, price) VALUES (5, 10);
+INSERT INTO injuryvalue(injury, price) VALUES (6, 13);
+INSERT INTO injuryvalue(injury, price) VALUES (7, 17);
+INSERT INTO injuryvalue(injury, price) VALUES (8, 21);
 
 COMMIT;
 
