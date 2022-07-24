@@ -25,10 +25,10 @@ jobs:
       uses: joshuaavalon/flyway-action@v2.1.0
       with:
         # The jdbc url to use to connect to the database
-        url: ${{ secrets.DB }}
+        url: ${{ env.DB }}
         # The user to use to connect to the database
-        user: ${{ secrets.DBUSER }}
+        user: ${{ env.DBUSER }}
         # The password to use to connect to the database
-        password: ${{ secrets.DBPW }}
+        password: ${{ env.DBPW }}
         # Comma-separated list of locations to scan recursively for migrations
         locations: ./sql
