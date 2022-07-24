@@ -28,7 +28,7 @@ CREATE TABLE figuresize (
 --
 ALTER TABLE figuresize
   ADD PRIMARY KEY (id);
-  
+
 --
 -- AUTO_INCREMENT für Tabelle `figuresize`
 --
