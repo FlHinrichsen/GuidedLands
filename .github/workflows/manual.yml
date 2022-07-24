@@ -13,6 +13,7 @@ on:
 jobs:
   # This workflow contains a single job called "greet"
   database:
+    environment: develop
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
