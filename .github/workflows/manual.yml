@@ -19,12 +19,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Flyway Migration
-      # You may pin to the exact commit or the version.
-      # uses: joshuaavalon/flyway-action@c3064cb4f96e4bb3a6acae6d6ab995b83c41c54d
-      uses: joshuaavalon/flyway-action@v2.1.0
+    - uses: actions/checkout@v2
+    - uses: joshuaavalon/flyway-action@v2.1.0
       with:
         # The jdbc url to use to connect to the database
         url: ${{ secrets.DB }}
