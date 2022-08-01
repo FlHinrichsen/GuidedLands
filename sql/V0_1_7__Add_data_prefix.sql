@@ -12,12 +12,12 @@ START TRANSACTION;
 
 -- --------------------------------------------------------
 
-ALTER TABLE figuresize RENAME data_figuresize
-ALTER TABLE figuresizevalue RENAME data_figuresizevalue
-ALTER TABLE deathvalue RENAME data_deathvalue
-ALTER TABLE injuryvalue RENAME data_injuryvalue
-ALTER TABLE lifevalue RENAME data_lifevalue
-ALTER TABLE initiativevalue RENAME data_initiativevalue
+ALTER TABLE figuresize RENAME data_figuresize;
+ALTER TABLE figuresizevalue RENAME data_figuresizevalue;
+ALTER TABLE deathvalue RENAME data_deathvalue;
+ALTER TABLE injuryvalue RENAME data_injuryvalue;
+ALTER TABLE lifevalue RENAME data_lifevalue;
+ALTER TABLE initiativevalue RENAME data_initiativevalue;
 
 COMMIT;
 
