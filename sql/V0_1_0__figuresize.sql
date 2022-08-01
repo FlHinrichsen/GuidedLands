@@ -26,8 +26,7 @@ CREATE TABLE figuresize (
 --
 -- Indizes für die Tabelle `Allianz`
 --
-ALTER TABLE figuresize
-  ADD PRIMARY KEY (id);
+ALTER TABLE figuresize ADD PRIMARY KEY (id);
 
 --
 -- AUTO_INCREMENT für Tabelle `figuresize`
