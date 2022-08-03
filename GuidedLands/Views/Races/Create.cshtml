@@ -1,0 +1,108 @@
+﻿@model GuidedLands.Data.DataObjects.Race
+
+@***REMOVED***
+    ViewData["Title"] = "Create";
+***REMOVED***
+
+<h1>Create</h1>
+
+<h4>Race</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataFiguresizeId" class="control-label"></label>
+                <select asp-for="DataFiguresizeId" class ="form-control" asp-items="ViewBag.DataFiguresizeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataDeathvalueDeath" class="control-label"></label>
+                <select asp-for="DataDeathvalueDeath" class ="form-control" asp-items="ViewBag.DataDeathvalueDeath"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataInjuryvalueInjury" class="control-label"></label>
+                <select asp-for="DataInjuryvalueInjury" class ="form-control" asp-items="ViewBag.DataInjuryvalueInjury"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataLifevalueLife" class="control-label"></label>
+                <select asp-for="DataLifevalueLife" class ="form-control" asp-items="ViewBag.DataLifevalueLife"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataInitiativevalueInitiative" class="control-label"></label>
+                <select asp-for="DataInitiativevalueInitiative" class ="form-control" asp-items="ViewBag.DataInitiativevalueInitiative"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight11" class="control-label"></label>
+                <input asp-for="Weight11" class="form-control" />
+                <span asp-validation-for="Weight11" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight10" class="control-label"></label>
+                <input asp-for="Weight10" class="form-control" />
+                <span asp-validation-for="Weight10" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight9" class="control-label"></label>
+                <input asp-for="Weight9" class="form-control" />
+                <span asp-validation-for="Weight9" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight8" class="control-label"></label>
+                <input asp-for="Weight8" class="form-control" />
+                <span asp-validation-for="Weight8" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight7" class="control-label"></label>
+                <input asp-for="Weight7" class="form-control" />
+                <span asp-validation-for="Weight7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight6" class="control-label"></label>
+                <input asp-for="Weight6" class="form-control" />
+                <span asp-validation-for="Weight6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight5" class="control-label"></label>
+                <input asp-for="Weight5" class="form-control" />
+                <span asp-validation-for="Weight5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight4" class="control-label"></label>
+                <input asp-for="Weight4" class="form-control" />
+                <span asp-validation-for="Weight4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight3" class="control-label"></label>
+                <input asp-for="Weight3" class="form-control" />
+                <span asp-validation-for="Weight3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight2" class="control-label"></label>
+                <input asp-for="Weight2" class="form-control" />
+                <span asp-validation-for="Weight2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight1" class="control-label"></label>
+                <input asp-for="Weight1" class="form-control" />
+                <span asp-validation-for="Weight1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts ***REMOVED***
+    @***REMOVED***await Html.RenderPartialAsync("_ValidationScriptsPartial");***REMOVED***
+***REMOVED***
