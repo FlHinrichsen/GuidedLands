@@ -13,30 +13,21 @@ START TRANSACTION;
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `size`
+-- Tabellenstruktur für Tabelle `injuryvalue`
 --
 
-CREATE TABLE figuresize (
-  id int(11) NOT NULL,
-  low float(11) NOT NULL,
-  high float(11) NOT NULL,
-  text varchar(20) NOT NULL
+CREATE TABLE injuryvalue (
+  injury int(11) NOT NULL,
+  price int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Indizes für die Tabelle `Allianz`
---
-ALTER TABLE figuresize ADD PRIMARY KEY (id);
-
---
--- AUTO_INCREMENT für Tabelle `figuresize`
---
-ALTER TABLE figuresize
-  MODIFY id int(11) NOT NULL AUTO_INCREMENT;
-
-INSERT INTO figuresize(low, high, text) VALUES (1.6, 2.7, 'Klein');
-INSERT INTO figuresize(low, high, text) VALUES (2.7, 4, 'Mittel');
-INSERT INTO figuresize(low, high, text) VALUES (4, 7, 'Groß');
+INSERT INTO injuryvalue(injury, price) VALUES (2, 4);
+INSERT INTO injuryvalue(injury, price) VALUES (3, 5);
+INSERT INTO injuryvalue(injury, price) VALUES (4, 7);
+INSERT INTO injuryvalue(injury, price) VALUES (5, 10);
+INSERT INTO injuryvalue(injury, price) VALUES (6, 13);
+INSERT INTO injuryvalue(injury, price) VALUES (7, 17);
+INSERT INTO injuryvalue(injury, price) VALUES (8, 21);
 
 COMMIT;
 

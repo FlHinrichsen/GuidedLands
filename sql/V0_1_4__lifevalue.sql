@@ -13,30 +13,19 @@ START TRANSACTION;
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `size`
+-- Tabellenstruktur für Tabelle `lifevalue`
 --
 
-CREATE TABLE figuresize (
-  id int(11) NOT NULL,
-  low float(11) NOT NULL,
-  high float(11) NOT NULL,
-  text varchar(20) NOT NULL
+CREATE TABLE lifevalue (
+  life int(11) NOT NULL,
+  price int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Indizes für die Tabelle `Allianz`
---
-ALTER TABLE figuresize ADD PRIMARY KEY (id);
-
---
--- AUTO_INCREMENT für Tabelle `figuresize`
---
-ALTER TABLE figuresize
-  MODIFY id int(11) NOT NULL AUTO_INCREMENT;
-
-INSERT INTO figuresize(low, high, text) VALUES (1.6, 2.7, 'Klein');
-INSERT INTO figuresize(low, high, text) VALUES (2.7, 4, 'Mittel');
-INSERT INTO figuresize(low, high, text) VALUES (4, 7, 'Groß');
+INSERT INTO lifevalue(life, price) VALUES (2, 4);
+INSERT INTO lifevalue(life, price) VALUES (3, 7);
+INSERT INTO lifevalue(life, price) VALUES (4, 11);
+INSERT INTO lifevalue(life, price) VALUES (5, 16);
+INSERT INTO lifevalue(life, price) VALUES (6, 22);
 
 COMMIT;
 
