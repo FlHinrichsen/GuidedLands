@@ -17,7 +17,6 @@ START TRANSACTION;
 --
 
 CREATE TABLE figuresizevalue (
-  id int(11) NOT NULL,
   figuresize_id int(11) NOT NULL,
   death_low int(11) NOT NULL,
   death_high int(11) NOT NULL,
@@ -28,12 +27,6 @@ CREATE TABLE figuresizevalue (
   initiative int(11) NOT NULL,
   price int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Indizes für die Tabelle `figuresizevalue`
---
-ALTER TABLE figuresizevalue
-  ADD PRIMARY KEY (id);
 
 --
 -- Constraints der Tabelle `figuresizevalue`
