@@ -26,7 +26,7 @@ jobs:
     - uses: joshuaavalon/flyway-action@v2.1.0
       with:
         # The jdbc url to use to connect to the database
-        url: $***REMOVED******REMOVED*** secrets.DB ***REMOVED******REMOVED***
+        url: $***REMOVED******REMOVED*** secrets.DBHOST ***REMOVED******REMOVED***:3306/$***REMOVED******REMOVED*** secrets.DB ***REMOVED******REMOVED***
         # The user to use to connect to the database
         user: $***REMOVED******REMOVED*** secrets.DBUSER ***REMOVED******REMOVED***
         # The password to use to connect to the database
@@ -46,6 +46,14 @@ jobs:
           dotnet-version: '6.0.x'
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Apply Secrets
+        uses: LSVH/gha-replace-placeholders@v1
+        with:
+          placeholders: |
+            %%DBUSER%%=$***REMOVED******REMOVED*** secrets.DBUSER ***REMOVED******REMOVED***
+            %%DBPW%%=$***REMOVED******REMOVED*** secrets.DBPW ***REMOVED******REMOVED***
+            %%DBHOST%%=$***REMOVED******REMOVED*** secrets.DBHOST ***REMOVED******REMOVED***
+            %%DB%%=$***REMOVED******REMOVED*** secrets.DB ***REMOVED******REMOVED***
       - name: Restore  dependencies
         run: dotnet restore GuidedLands.sln
       - name: Build
