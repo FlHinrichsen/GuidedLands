@@ -1,22 +1,22 @@
 ﻿#nullable disable
 
 namespace GuidedLands.Data.DataObjects
-***REMOVED***
+{
   using System.Collections.Generic;
 
   public class DataFiguresize
-    ***REMOVED***
+    {
         public DataFiguresize()
-        ***REMOVED***
+        {
             Races = new HashSet<Race>();
-    ***REMOVED***
+        }
 
-        public int Id ***REMOVED*** get; set; ***REMOVED***
-        public float Low ***REMOVED*** get; set; ***REMOVED***
-        public float High ***REMOVED*** get; set; ***REMOVED***
-        public string Text ***REMOVED*** get; set; ***REMOVED***
+        public int Id { get; set; }
+        public float Low { get; set; }
+        public float High { get; set; }
+        public string Text { get; set; }
 
-        public virtual DataFiguresizevalue DataFiguresizevalue ***REMOVED*** get; set; ***REMOVED***
-        public virtual ICollection<Race> Races ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        public virtual DataFiguresizevalue DataFiguresizevalue { get; set; }
+        public virtual ICollection<Race> Races { get; set; }
+    }
+}

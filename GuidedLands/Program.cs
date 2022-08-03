@@ -19,15 +19,15 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
-***REMOVED***
+{
   app.UseMigrationsEndPoint();
-***REMOVED***
+}
 else
-***REMOVED***
+{
   app.UseExceptionHandler("/Home/Error");
   // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
   app.UseHsts();
-***REMOVED***
+}
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -39,7 +39,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "***REMOVED***controller=Races***REMOVED***/***REMOVED***action=Index***REMOVED***/***REMOVED***id?***REMOVED***");
+    pattern: "{controller=Races}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();

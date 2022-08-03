@@ -1,4 +1,4 @@
-***REMOVED***
+{
   "version": 2,
   "dgSpecHash": "nCHSkUDDCDjIBAhe32m6Ag7MV58VEUpoyVlszauKLVrZQeRkTN5n2QJqS4nJZYwrYFsTduOJc2P/T1y/xm6Njg==",
   "success": true,
@@ -193,4 +193,4 @@
     "C:\\Users\\florian_hinrichsen\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
-***REMOVED***
+}

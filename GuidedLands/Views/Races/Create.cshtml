@@ -1,8 +1,8 @@
 ﻿@model GuidedLands.Data.DataObjects.Race
 
-@***REMOVED***
+@{
     ViewData["Title"] = "Create";
-***REMOVED***
+}
 
 <h1>Create</h1>
 
@@ -103,6 +103,6 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-@section Scripts ***REMOVED***
-    @***REMOVED***await Html.RenderPartialAsync("_ValidationScriptsPartial");***REMOVED***
-***REMOVED***
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

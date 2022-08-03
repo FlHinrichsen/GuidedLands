@@ -1,8 +1,8 @@
 ﻿@model IEnumerable<GuidedLands.Data.DataObjects.Race>
 
-@***REMOVED***
+@{
     ViewData["Title"] = "Index";
-***REMOVED***
+}
 
 <h1>Index</h1>
 
@@ -51,7 +51,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model)
-***REMOVED***
+{
 	<tr>
 		<td rowspan="2">
 			@Html.DisplayFor(modelItem => item.Name)
@@ -133,6 +133,6 @@
 			@Html.DisplayFor(modelItem => item.RacePrice)
 		</td>
 	</tr>
-***REMOVED***
+}
     </tbody>
 </table>

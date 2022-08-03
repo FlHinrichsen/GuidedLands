@@ -2,28 +2,28 @@
 using Microsoft.EntityFrameworkCore;
 
 namespace GuidedLands.Data
-***REMOVED***
+{
   using GuidedLands.Data.DataObjects;
 
   public class ApplicationDbContext : DbContext
-  ***REMOVED***
+  {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
-    ***REMOVED***
-***REMOVED***
+    {
+    }
     
-    public virtual DbSet<DataDeathvalue> DataDeathvalues ***REMOVED*** get; set; ***REMOVED***
-    public virtual DbSet<DataFiguresize> DataFiguresizes ***REMOVED*** get; set; ***REMOVED***
-    public virtual DbSet<DataFiguresizevalue> DataFiguresizevalues ***REMOVED*** get; set; ***REMOVED***
-    public virtual DbSet<DataInitiativevalue> DataInitiativevalues ***REMOVED*** get; set; ***REMOVED***
-    public virtual DbSet<DataInjuryvalue> DataInjuryvalues ***REMOVED*** get; set; ***REMOVED***
-    public virtual DbSet<DataLifevalue> DataLifevalues ***REMOVED*** get; set; ***REMOVED***
-    public virtual DbSet<Race> Races ***REMOVED*** get; set; ***REMOVED***
+    public virtual DbSet<DataDeathvalue> DataDeathvalues { get; set; }
+    public virtual DbSet<DataFiguresize> DataFiguresizes { get; set; }
+    public virtual DbSet<DataFiguresizevalue> DataFiguresizevalues { get; set; }
+    public virtual DbSet<DataInitiativevalue> DataInitiativevalues { get; set; }
+    public virtual DbSet<DataInjuryvalue> DataInjuryvalues { get; set; }
+    public virtual DbSet<DataLifevalue> DataLifevalues { get; set; }
+    public virtual DbSet<Race> Races { get; set; }
         
     protected override void OnModelCreating(ModelBuilder modelBuilder)
-    ***REMOVED***
+    {
       modelBuilder.Entity<DataDeathvalue>(entity =>
-      ***REMOVED***
+      {
         entity.HasKey(e => e.Death)
                   .HasName("PRIMARY");
 
@@ -39,10 +39,10 @@ namespace GuidedLands.Data
         entity.Property(e => e.Price)
                   .HasColumnType("int(11)")
                   .HasColumnName("price");
-  ***REMOVED***);
+      });
 
       modelBuilder.Entity<DataFiguresize>(entity =>
-      ***REMOVED***
+      {
         entity.ToTable("data_figuresize");
 
         entity.HasIndex(e => e.Text, "text")
@@ -60,10 +60,10 @@ namespace GuidedLands.Data
                   .IsRequired()
                   .HasMaxLength(20)
                   .HasColumnName("text");
-  ***REMOVED***);
+      });
 
       modelBuilder.Entity<DataFiguresizevalue>(entity =>
-      ***REMOVED***
+      {
         entity.HasKey(e => e.FiguresizeId)
                   .HasName("PRIMARY");
 
@@ -110,10 +110,10 @@ namespace GuidedLands.Data
                   .HasForeignKey<DataFiguresizevalue>(d => d.FiguresizeId)
                   .OnDelete(DeleteBehavior.ClientSetNull)
                   .HasConstraintName("figuresizevalue_1");
-  ***REMOVED***);
+      });
 
       modelBuilder.Entity<DataInitiativevalue>(entity =>
-      ***REMOVED***
+      {
         entity.HasKey(e => e.Initiative)
                   .HasName("PRIMARY");
 
@@ -129,10 +129,10 @@ namespace GuidedLands.Data
         entity.Property(e => e.Price)
                   .HasColumnType("int(11)")
                   .HasColumnName("price");
-  ***REMOVED***);
+      });
 
       modelBuilder.Entity<DataInjuryvalue>(entity =>
-      ***REMOVED***
+      {
         entity.HasKey(e => e.Injury)
                   .HasName("PRIMARY");
 
@@ -148,10 +148,10 @@ namespace GuidedLands.Data
         entity.Property(e => e.Price)
                   .HasColumnType("int(11)")
                   .HasColumnName("price");
-  ***REMOVED***);
+      });
 
       modelBuilder.Entity<DataLifevalue>(entity =>
-      ***REMOVED***
+      {
         entity.HasKey(e => e.Life)
                   .HasName("PRIMARY");
 
@@ -167,10 +167,10 @@ namespace GuidedLands.Data
         entity.Property(e => e.Price)
                   .HasColumnType("int(11)")
                   .HasColumnName("price");
-  ***REMOVED***);
+      });
       
       modelBuilder.Entity<Race>(entity =>
-      ***REMOVED***
+      {
         entity.ToTable("race");
 
         entity.HasIndex(e => e.Name, "name")
@@ -288,7 +288,7 @@ namespace GuidedLands.Data
                   .HasForeignKey(d => d.DataLifevalueLife)
                   .OnDelete(DeleteBehavior.ClientSetNull)
                   .HasConstraintName("race_5");
-  ***REMOVED***);
-***REMOVED***
-  ***REMOVED***
-***REMOVED***
+      });
+    }
+  }
+}
