@@ -26,7 +26,7 @@ jobs:
     - uses: joshuaavalon/flyway-action@v2.1.0
       with:
         # The jdbc url to use to connect to the database
-        url: ${{ secrets.DBHOST }}:3306/${{ secrets.DB }}
+        url: jdbc:mariadb://${{ secrets.DBHOST }}:3306/${{ secrets.DB }}
         # The user to use to connect to the database
         user: ${{ secrets.DBUSER }}
         # The password to use to connect to the database
