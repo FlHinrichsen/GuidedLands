@@ -1,0 +1,138 @@
+﻿@model IEnumerable<GuidedLands.Data.DataObjects.Race>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+	    <th rowspan="2">
+		    Name
+	    </th>
+	    <th rowspan="2">
+		    Größe
+	    </th>
+	    <th rowspan="2">
+		    Tod
+	    </th>
+	    <th rowspan="2">
+		    Initiative
+	    </th>
+	    <th rowspan="2">
+		    Verletzung
+	    </th>
+	    <th rowspan="2">
+		    Leben
+	    </th>
+	    <th colspan="11">
+		    Reichweiten
+	    </th>
+	    <th rowspan="2"></th>
+    </tr>
+    <tr>
+	    <th>0-1</th>
+	    <th>2</th>
+	    <th>3</th>
+	    <th>4</th>
+	    <th>5</th>
+	    <th>6</th>
+	    <th>7</th>
+	    <th>8</th>
+	    <th>9</th>
+	    <th>10</th>
+	    <th>11</th>
+    </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+	<tr>
+		<td rowspan="2">
+			@Html.DisplayFor(modelItem => item.Name)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.DataFiguresize.Text)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.DataDeathvalueDeathNavigation.Death)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.DataInitiativevalueInitiativeNavigation.Initiative)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.DataInjuryvalueInjuryNavigation.Injury)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.DataLifevalueLifeNavigation.Life)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Weight1)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Weight2)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Weight3)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Weight4)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Weight5)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Weight6)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Weight7)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Weight8)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Weight9)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Weight10)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Weight11)
+		</td>
+		<td>
+			<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+			<a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+			<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			@Html.DisplayFor(modelItem => item.DataFiguresize.DataFiguresizevalue.Price)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.DataDeathvalueDeathNavigation.Price)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.DataInitiativevalueInitiativeNavigation.Price)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.DataInjuryvalueInjuryNavigation.Price)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.DataLifevalueLifeNavigation.Price)
+		</td>
+		<td colspan="11">
+			@Html.DisplayFor(modelItem => item.WeightPrice)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.RacePrice)
+		</td>
+	</tr>
+}
+    </tbody>
+</table>
