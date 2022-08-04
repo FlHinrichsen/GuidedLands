@@ -26,10 +26,37 @@ jobs:
     - uses: joshuaavalon/flyway-action@v2.1.0
       with:
         # The jdbc url to use to connect to the database
-        url: ${{ secrets.DB }}
+        url: jdbc:mariadb://${{ secrets.DBHOST }}:3306/${{ secrets.DB }}
         # The user to use to connect to the database
         user: ${{ secrets.DBUSER }}
         # The password to use to connect to the database
         password: ${{ secrets.DBPW }}
         # Comma-separated list of locations to scan recursively for migrations
         # locations: ./sql
+  build:
+    environment: develop
+    
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v2.1.0
+        with:
+          dotnet-version: '6.0.x'
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Apply Secrets
+        uses: LSVH/gha-replace-placeholders@v1
+        with:
+          placeholders: |
+            %%DBUSER%%=${{ secrets.DBUSER }}
+            %%DBPW%%=${{ secrets.DBPW }}
+            %%DBHOST%%=${{ secrets.DBHOST }}
+            %%DB%%=${{ secrets.DB }}
+      - name: Restore  dependencies
+        run: dotnet restore GuidedLands.sln
+      - name: Build
+        run: dotnet build --configuration Release GuidedLands.sln
+      - name: Publish
+        run: dotnet publish --configuration Release -r linux-x64 --self-contained GuidedLands.sln
